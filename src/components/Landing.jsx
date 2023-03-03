@@ -1,21 +1,24 @@
 import React from 'react'
-
-import Alert from './Alert/Alert'
-import Button from './Button/Button'
 import Navbar from './Menu/Navbar'
+import './Landing.css'
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ItemListContainer from './ItemListContainer';
+
+
 const Landing = () => {
 
     return (
         <>
-        <Navbar />
-        <div style={{padding: 30}}>
-            <Button buttonName="Aceptar" isUsedBootstrap={true} />
-            <Button buttonName="Eliminar" isUsedBootstrap={false} styleCondition={true} />
-        </div>  
-
-        <div>
-            <Alert />
-        </div>
+    <BrowserRouter>
+        <Navbar/>
+        <Routes>
+            <Route exact path="/" element={<Landing />} />
+            <Route exact path="/categoria" element={<ItemListContainer />} />
+            <Route exact path="/contact" element={<ContactView />} />
+        </Routes>
+    
+    </BrowserRouter>
         </>
     )
 }

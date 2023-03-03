@@ -12,7 +12,7 @@ const ItemListContainer = () => {
         
 
         <div><h2>Bienvenidos</h2></div>
-        <p style={{color:'red'}}>HEllO</p>
+        <p style={{color:'red'}}> Lorem ipsum dolor sit ass. </p>
 
 
 </>     
