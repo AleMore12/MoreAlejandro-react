@@ -1,15 +1,19 @@
+// Componente botón que recibe diferentes propiedades:props (Utilizando componente basado en funciones)
+
 import React from 'react'
 
-export const Button = (props) => {
-  return (
-    <>
-    <div style={{display:'flex',justifyContent:'center'}}>
+const Button = (props) => {
+
+    return (
+        
+        !props.isUsedBootstrap ?
         <button 
-          style={props.buttonCondition ? {backgroundColor:'green',color:"yellow", margin:50} : {backgroundColor:'skyblue',color:"blue"}}> {props.buttonName} 
+            style={props.styleCondition ? {backgroundColor: 'red', color: 'white'} : {backgroundColor: 'green', color: 'white'}}>
+            {props.buttonName}
         </button>
-    </div>
-    </>
-  )
+        :
+        <button type="button" class="btn btn-dark">{props.buttonName}</button> 
+    )
 }
 
 

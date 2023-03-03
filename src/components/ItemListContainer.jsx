@@ -1,17 +1,20 @@
 import React from 'react'
-import { Alert } from './Alert/Alert'
+// import { Alert } from './Alert/Alert'
 
-const ItemListContainer = (props) => {
+
+const ItemListContainer = () => {
 
 
     return (
 <>
         
-        <Alert textAlert={props.textAlert} />
+        {/* <Alert textAlert={props.textAlert} /> */}
         
 
-        
-        <div>{props.greeting}</div>
+        <div><h2>Bienvenidos</h2></div>
+        <p style={{color:'red'}}>HEllO</p>
+
+
 </>     
         
     )

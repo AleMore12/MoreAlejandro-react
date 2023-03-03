@@ -1,35 +1,24 @@
 import React from 'react'
-import { Alert } from './Alert/Alert'
+
+import Alert from './Alert/Alert'
 import Button from './Button/Button'
-import ItemListContainer from './ItemListContainer'
 import Navbar from './Menu/Navbar'
+const Landing = () => {
 
-export const Landing = () => {
     return (
-    <>
-        <Navbar/>
-        
-        <Button buttonName= "Aceptar" />
+        <>
+        <Navbar />
+        <div style={{padding: 30}}>
+            <Button buttonName="Aceptar" isUsedBootstrap={true} />
+            <Button buttonName="Eliminar" isUsedBootstrap={false} styleCondition={true} />
+        </div>  
 
-
-        <Button buttonName= "Danger" buttonCondition= {true} hacemeEsto={"/index"}/>
-
-        <div style = {{padding:20}}>
-            <Alert/>
+        <div>
+            <Alert />
         </div>
-        
-        
-        
-        <ItemListContainer greeting='Bienvenidos a mi TIENDA VIRTUAL'/>
-    </>
-
-    
-    
-    
-
-)
+        </>
+    )
 }
-
 
 
 export default Landing
