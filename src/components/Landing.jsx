@@ -16,6 +16,7 @@ const Landing = () => {
         <Navbar/>
         <Routes>
             <Route exact path="/" element={<ItemListContainer/>} />
+            {/* " : " Colocar esos dos puntos hace que se cree un nuevo ID */}
             <Route exact path="/categoria/:categoriaId" element={<ItemListContainer />} />
             <Route exact path="/contact" element={<ContactView />} />
         </Routes>

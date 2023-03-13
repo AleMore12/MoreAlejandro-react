@@ -16,7 +16,11 @@ const films = [
     {id: 4, image: "https://i.pinimg.com/564x/e8/2f/82/e82f828f60f7d210d7c8574595c771e9.jpg", category:'series',title:"Dark"}
 ];
 
-export const ItemListContainer = ({texto}) => {
+export const ItemListContainer = ({ texto }) => {
+    
+    const onAdd = (quantity) => {
+        console.log(`Compraste ${quantity} unidades`);
+    }
     const [data, setdata] = useState([]);
 
     const [categoriaId] = useParams();
@@ -36,9 +40,6 @@ export const ItemListContainer = ({texto}) => {
     }, [categoriaId])
 
 
-    const onAdd = (quantity) => {
-        console.log(`Compraste ${quantity} unidades`);
-    }
     
 
 
@@ -55,17 +56,4 @@ export const ItemListContainer = ({texto}) => {
 }
         
     
-
-
-
-
-
-
-
-
-        
-
-
-
-        
 export default ItemListContainer
