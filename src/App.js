@@ -1,25 +1,54 @@
-//  import logo from './logo.png';
-//  import './App.css';
+import React from 'react';
+import Landing from './components/Landing';
+import  Navbar  from './components/NavBar/Navbar';
+// import { Results } from './components/Results/Results';
+// import React, { useEffect, useState } from 'react';
 
+
+
+// import { BrowserRouter } from 'react-router-dom';
+// import { AppRoutes } from './AppRoutes';
 
 function App() {
+
+
+    // const [search, setSearch] = useState("")
+    // const [results, setResults] = useState([])
+
+    // // Llamando a la api
+    // useEffect(() => {
+    //   // "!=" : distinto 
+    //   // search sea distinto al "" string vacío y que solo haga el fetch cuando tenga contenido
+    //   if (search != "") { 
+    //     // Usar backsticks
+    //   fetch(`https://api.mercadolibre.com/sites/MLA/search?q= ${search}`)
+    //   .then((res) => res.json())
+    //   .then((data) => setResults(data.results))
+    //   }
+    // }, [search])
+    
+
+
+    // Muestro por consola para corroborar 
+// console.log(results)
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+
+    {/* <BrowserRouter>  */}
+
+          <Landing/> 
+          {/* <Navbar/> */}
+          {/* <Navbar setSearch={setSearch}/> */}
+          {/* <Results results={results}/>  */}
+
+          {/* <AppRoutes/> */}
+
+
+    {/* </BrowserRouter> */}
     </div>
+    
   );
 }
 

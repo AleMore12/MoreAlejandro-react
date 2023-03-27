@@ -1,30 +1,24 @@
-import React from 'react'
-import Navbar from './Menu/Navbar'
+import React, { useState } from 'react'
+import ThemeContext from './cartContext/themeContext'
+import Navbar from './NavBar/Navbar'
 import './Landing.css'
-import ContactView from './Contact/ContacView'
 
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import ItemListContainer from './ItemListContainer';
 
 
 const Landing = () => {
 
-    return (
-        <>
-    <BrowserRouter>
-        <Navbar/>
-        <Routes>
-            <Route exact path="/" element={<ItemListContainer/>} />
-            {/* " : " Colocar esos dos puntos hace que se cree un nuevo ID */}
-            <Route exact path="/categoria/:categoriaId" element={<ItemListContainer />} />
-            <Route exact path="/contact" element={<ContactView />} />
-        </Routes>
+    const [darkMode, setDarkMode] = useState(true)
     
-    </BrowserRouter>
-        </>
-    )
-}
+    const toggleDarkMode = () => {
+        setDarkMode(!darkMode)
+    }
 
+    return (
+        <ThemeContext.Provider value={{ darkMode, toggleDarkMode }}>
+            <Navbar />
+        </ThemeContext.Provider>
+        )
+}
 
 export default Landing
