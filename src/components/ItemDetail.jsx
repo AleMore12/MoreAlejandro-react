@@ -58,16 +58,16 @@ const ItemDetail = () => {
 
 
 
-    const selectItem = ItemsColletion.find(product => product.id == itemId)
+    const selectItem = items.find(product => product.id == itemId)
 
 
     return (
         <div style={{  justifyContent: 'center', padding: '50px', gap: '20px' }}>
         
-        <img src={selectItem.image} style={{objectFit:'contain', height:'200px'}} />
-        <h2>{selectItem.name}</h2>
-        <p>Price: {selectItem.price}</p>
-        <p>Description: {selectItem.description}</p>
+        <img src={items.imageId} style={{objectFit:'contain', height:'200px'}} />
+        <h2>{items.name}</h2>
+        <p>Price: {items.price}</p>
+        <p>Description: {items.description}</p>
         <button style={{ background: '#007bff', color: '#fff', border: 'none', padding: '0.5rem 1rem', marginRight: '1rem' }} onClick={() => addToCart(selectItem, 1)}>
             Agregar al carrito
         </button>
