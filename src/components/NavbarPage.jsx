@@ -18,11 +18,11 @@ const NavbarPage = () => {
     }
 
     return (
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/">Sneakers Shop</a>
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-            <a class="nav-link" href="/">Home</a>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <a className="navbar-brand" href="/">Sneakers Shop</a>
+        <ul className="navbar-nav mr-auto">
+            <li className="nav-item active">
+            <a className="nav-link" href="/">Home</a>
             </li>
 
             <li>
@@ -32,7 +32,7 @@ const NavbarPage = () => {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}>
 
-                <i class="bi bi-cart4"></i>
+                <i className="bi bi-cart4"></i>
 
                 {cart.length > 0 && (
                     <span
@@ -63,7 +63,7 @@ const NavbarPage = () => {
                         </ul>
                         <ul>
                         <span><u>Total a pagar:</u> ${getTotal()} </span>
-                        <button type="button" class="btn btn-dark btn-sm" onClick={() => clearCart()}>Vaciar</button>
+                        <button type="button" className="btn btn-dark btn-sm" onClick={() => clearCart()}>Vaciar</button>
                     </ul>
 
                     </div>
